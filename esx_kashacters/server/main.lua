@@ -31,7 +31,7 @@ AddEventHandler('kashactersS:CharacterChosen', function(charid, ischar)
     local src = source
     local new = true
     local spawn = {}
-    if type(charid) == "number" and string.len(charid) == 1 and type(ischar) == "boolean" then
+	if type(charid) == "number" and type(ischar) == "boolean" then
         SetLastCharacter(src, tonumber(charid))
         SetCharToIdentifier(GetPlayerIdentifiers(src)[1], tonumber(charid))
     
